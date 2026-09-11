@@ -98,6 +98,12 @@ jobs:
         working-directory: starter/frontend
         run: npm ci
 
+      - name: Run tests
+        working-directory: starter/frontend
+        run: npm run test
+        env:
+          CI: true
+
       - name: Build frontend
         working-directory: starter/frontend
         run: npm run build
